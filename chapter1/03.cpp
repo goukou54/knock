@@ -2,12 +2,11 @@
 #include <sstream>
 #include <vector>
 
-void replace(std::string& str, std::string from, std::string to)
+void replace(std::string& str, const std::string& from, const std::string& to)
 {
     std::size_t pos = str.find(from);
     while (pos != std::string::npos) {
         str.replace(pos, from.length(), to);
-        pos += to.length();
         pos = str.find(from);
     }
 }
